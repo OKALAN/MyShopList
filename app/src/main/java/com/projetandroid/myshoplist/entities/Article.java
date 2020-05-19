@@ -2,7 +2,7 @@ package com.projetandroid.myshoplist.entities;
 import com.orm.SugarRecord;
 
 
-public class Article extends SugarRecord<Article>  {
+public class Article extends SugarRecord<Article> {
 
     public String Article_name;
     public Double Article_price;

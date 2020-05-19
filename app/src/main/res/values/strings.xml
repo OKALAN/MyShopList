@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">My ShopList</string>
+    <string name="dialog_to_del">are you sure want to delete?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="item_successfully_saved">item successfully saved</string>
+    <string name="update">UPDATE</string>
+    <string name="item_name">item name can\'t be empty</string>
+    <string name="item_price">price can\'t be empty</string>
+    <string name="success_update">item successfully updated</string>
+    <string name="success_del">item successfully deleted</string>
+    <string name="success_save">item successfully saved</string>
+    <string name="sucess_del_shopping">shopping sucessfully delete</string>
+    <string name="Ask_to_delete">Are you sure to delete?</string>
+    <string name="totalPrice">TotalPrice</string>
+    <string name="share_via">Share via</string>
+
 </resources>

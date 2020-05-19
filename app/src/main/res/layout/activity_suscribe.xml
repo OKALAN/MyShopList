@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".loginsuscribe.suscribe">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout">
+
+            <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_brown"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text=" Ma liste de courses" />
+
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/textName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_brown"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    android:text="Name" />
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:maxWidth="300dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_height="wrap_content">
+
+            </RelativeLayout>
+            <EditText
+                    android:id="@+id/editName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_layout_white_s"
+                    android:ems="10"
+                    android:hint="enter your name"
+                    android:gravity="left|center_vertical"
+                    android:textSize="18dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:inputType="text"
+                    tools:ignore="UnknownId"/>
+
+            <TextView
+                    android:id="@+id/textFamily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_brown"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    android:text="Family Name" />
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:maxWidth="300dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_height="wrap_content">
+
+            </RelativeLayout>
+            <EditText
+                    android:id="@+id/editFamily"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_layout_white_s"
+                    android:ems="10"
+                    android:hint="enter your family name"
+                    android:gravity="left|center_vertical"
+                    android:textSize="18dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:inputType="text"
+                    tools:ignore="UnknownId"/>
+
+
+            <TextView
+                    android:id="@+id/textPseudoSus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_brown"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    android:text="Pseudo" />
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:maxWidth="300dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_height="wrap_content">
+
+            </RelativeLayout>
+            <EditText
+                    android:id="@+id/editPseudo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_layout_white_s"
+                    android:ems="10"
+                    android:hint="enter your pseudo"
+                    android:gravity="left|center_vertical"
+                    android:textSize="18dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:inputType="text"
+                    tools:ignore="UnknownId"/>
+
+            <TextView
+                    android:id="@+id/textPasswordSus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_brown"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    android:text="Password" />
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:maxWidth="300dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_height="wrap_content">
+
+            </RelativeLayout>
+            <EditText
+                    android:id="@+id/editPassword2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_layout_white_s"
+                    android:ems="10"
+                    android:hint="enter your password"
+                    android:gravity="left|center_vertical"
+                    android:textSize="18dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:inputType="textPassword"
+                    tools:ignore="UnknownId"/>
+
+
+
+
+
+            <Button
+                    android:id="@+id/suscribe_button2"
+                    android:layout_width="256dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="70dp"
+                    android:background="@drawable/button_shape"
+                    android:text="Suscribe"
+                    android:textColor="@color/deep_grey"
+                    android:textSize="16sp"
+            />
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

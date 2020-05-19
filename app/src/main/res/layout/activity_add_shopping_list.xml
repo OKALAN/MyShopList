@@ -38,7 +38,43 @@
                     android:layout_height="35dp"
                     android:background="@drawable/rounded_layout_white_s"
                     android:ems="10"
-                    android:hint="Enter shopping list name"
+                    android:hint="enter shopping list name"
+                    android:gravity="left|center_vertical"
+                    android:textSize="18dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:inputType="textPersonName"
+                   />
+
+        </RelativeLayout>
+
+
+        <TextView
+                android:id="@+id/textBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_brown"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:text="Shopping budget" />
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:maxWidth="300dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_height="wrap_content">
+
+            <EditText
+                    android:id="@+id/editBudget"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_layout_white_s"
+                    android:ems="10"
+                    android:hint="how much in your pocket ?"
                     android:gravity="left|center_vertical"
                     android:textSize="18dp"
                     android:paddingTop="4dp"
@@ -46,7 +82,7 @@
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
                     android:layout_toLeftOf ="@+id/btnList"
-                    android:inputType="textPersonName"
+                    android:inputType="numberDecimal"
                     tools:ignore="UnknownId"/>
 
         </RelativeLayout>

@@ -38,8 +38,7 @@ public class suscribe extends AppCompatActivity  implements List<User> {
             @Override
             public void onClick(View v) {
                 Save();
-                Intent intent = new Intent(suscribe.this, Login.class);
-                startActivity(intent);
+
 
             }
         });
@@ -48,15 +47,24 @@ public class suscribe extends AppCompatActivity  implements List<User> {
     }
 
     private void Save() {
-         if ( editPseudo.getText().toString() != null &&  editPassword.getText().toString() != null )
-        user.UserName = editName.getText().toString();
-        user.UserFamilyName = editFamNme.getText().toString();
-        user.pseudo = editPseudo.getText().toString();
-        user.password = editPassword.getText().toString();
-        user.save();
-        setResult(RESULT_OK);
-        Toast.makeText(this, "Suscribe successful !!!", Toast.LENGTH_SHORT).show();
-         finish();
+         if ( (editPseudo.getText().toString().equals("")) ||  (editPassword.getText().toString().equals(""))  )
+         {
+             Toast.makeText(this, "Suscribe did not succeed !!!", Toast.LENGTH_SHORT).show();
+         }
+         else {
+
+             user.UserName = editName.getText().toString();
+             user.UserFamilyName = editFamNme.getText().toString();
+             user.pseudo = editPseudo.getText().toString();
+             user.password = editPassword.getText().toString();
+             user.save();
+             setResult(RESULT_OK);
+             Toast.makeText(this, "Suscribe successful !!!", Toast.LENGTH_SHORT).show();
+             finish();
+             Intent intent = new Intent(suscribe.this, Login.class);
+             startActivity(intent);
+         }
+
     }
 
     @Override

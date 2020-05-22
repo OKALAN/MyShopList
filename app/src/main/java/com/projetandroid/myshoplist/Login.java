@@ -1,6 +1,8 @@
 package com.projetandroid.myshoplist;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 import android.view.View;
 import android.widget.Adapter;
@@ -11,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.orm.query.Condition;
+import com.orm.query.Select;
 import com.projetandroid.myshoplist.entities.User;
 import com.projetandroid.myshoplist.loginsuscribe.suscribe;
 
@@ -20,13 +24,12 @@ import static java.lang.String.valueOf;
 
 public class Login extends AppCompatActivity implements List<User> {
     private List<User> users = new ArrayList<User>();
-    private User user = new User();
     private EditText pseudo;
     private EditText password;
     private String pseu,  pwd;
     private Button btnSuscribe, btnLogin;
     private Adapter adapter;
-
+    public static final String COL_3 ="pseudo";
 
 
     @Override
@@ -39,8 +42,7 @@ public class Login extends AppCompatActivity implements List<User> {
         btnLogin = (Button)findViewById(R.id.register_button);
         btnSuscribe = (Button)findViewById(R.id.suscribe_button);
 
-        pseu = pseudo.getText().toString().trim() ;
-        pwd = password.getText().toString().trim();
+
 
 
         btnSuscribe.setOnClickListener(new View.OnClickListener() {
@@ -55,30 +57,14 @@ public class Login extends AppCompatActivity implements List<User> {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                pseu = pseudo.getText().toString().trim() ;
+                pwd = password.getText().toString().trim();
 
-                List<User> existingPseudo = User.find(User.class, "pseudo=?",pseu );
-                int existPwd = 0;
-                boolean comp = true;
-                Log.d(String.valueOf(comp), "comparaison");
+                Select theUserQuery = Select.from(User.class).where(Condition.prop("pseudo").eq(pseu), Condition.prop("password").eq(pwd));
+               User user = (User) theUserQuery.first();
 
-                for (int i =0 ; i < existingPseudo.size() ;i++){
-                    user = existingPseudo.get(i);
-                    comp = pwd.equals(user.password);
-
-
-                    if (comp == true){
-
-                        existPwd = i + 1;
-                        return ;
-                    }
-
-
-
-                }
-
-                Log.d(String.valueOf(existPwd), "existPwd");
-
-                if ( existPwd == 0){
+               Log.d(String.valueOf(user), "user");
+                if ( user == null ){
                     Toast.makeText(Login.this, "pseudo or password is unright !!!", Toast.LENGTH_SHORT).show();
                  }
 
@@ -87,6 +73,7 @@ public class Login extends AppCompatActivity implements List<User> {
 
                      Intent intent = new Intent(Login.this, MainActivity.class);
                      startActivity(intent);
+                     finish();
 
                  }
 
@@ -96,6 +83,10 @@ public class Login extends AppCompatActivity implements List<User> {
         });
 
     }
+
+
+
+
 
     @Override
     public int size() {

@@ -2,6 +2,7 @@ package com.projetandroid.myshoplist;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +13,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
 import com.projetandroid.myshoplist.adapter.ArticleAddAdapter;
 import com.projetandroid.myshoplist.adapter.Shopping_adapter;
 import com.projetandroid.myshoplist.entities.Shopping_list;
@@ -30,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements List<Shopping_lis
     private ListView lv;
     private TextView txthint;
     private Shopping_adapter adapter;
+    private ImageButton imageButton;
 
 
     @Override
@@ -39,12 +36,14 @@ public class MainActivity extends AppCompatActivity implements List<Shopping_lis
 
         setContentView(R.layout.activity_main);
 
-         /*Intent i = new Intent(this, Login.class);
-        //i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-       i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        startActivity(i);*/
+        findViewById(R.id.imageButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, shopping_journal.class);
+                startActivity(intent);
 
-        //findViewById(R.id.btnADD).setOnClickListener((View.OnClickListener) this);
+            }
+        });
 
         lv = (ListView)findViewById(R.id.listview);
         txthint = (TextView)findViewById(R.id.textView2);

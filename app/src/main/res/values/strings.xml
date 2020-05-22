@@ -14,5 +14,6 @@
     <string name="Ask_to_delete">Are you sure to delete?</string>
     <string name="totalPrice">TotalPrice</string>
     <string name="share_via">Share via</string>
+    <string name="shopping_journal">shopping Journal</string>
 
 </resources>

@@ -21,12 +21,14 @@ import com.projetandroid.myshoplist.entities.Article;
 import com.projetandroid.myshoplist.entities.Article_add;
 import com.projetandroid.myshoplist.entities.Shopping_list;
 import com.projetandroid.myshoplist.utils.Shared;
+import android.provider.MediaStore;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
 import static android.content.Intent.*;
+import static androidx.core.app.ActivityCompat.startActivityForResult;
 
 
 public class AddArticle_dialog extends Dialog  implements  View.OnClickListener {
@@ -117,10 +119,10 @@ public class AddArticle_dialog extends Dialog  implements  View.OnClickListener 
 
         }
 
-     /*   imageView = findViewById(R.id.imageArticle);
+        /*imageView = findViewById(R.id.imageArticle);
         broswer = findViewById(R.id.gallery);
 
-        broswer.setOnClickListener(new View.OnClickListener() {
+       broswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -132,22 +134,18 @@ public class AddArticle_dialog extends Dialog  implements  View.OnClickListener 
 
     }
 
-  /*  private void openGallery() {
-        Intent gallery = new Intent(ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
-        ActivityCompat.startActivityForResult(gallery, GALLERY_REQUEST_CODE);
+   /* private void openGallery() {
+        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        startActivityForResult(gallery, GALLERY_REQUEST_CODE);
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
-
         if (resultCode == RESULT_OK && requestCode == GALLERY_REQUEST_CODE){
             imageURI = data.getData();
             imageView.setImageURI(imageURI);
-
         }
-
-    } */
+    }*/
 
 
     protected AddArticle_dialog(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {

@@ -8,7 +8,7 @@
         android:background="@color/white"
         tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
@@ -25,11 +25,21 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"
                 android:layout_gravity="center_horizontal"
-                android:text=" Ma liste de courses" />
+                android:text=" Ma liste de courses" android:layout_marginStart="52dp"
+                android:layout_alignStart="@+id/imageButton"/>
+        <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@drawable/icon_state"
+                android:scaleType="fitXY"
+                app:srcCompat="@mipmap/ic_assignment_white_24dp" android:layout_marginTop="8dp"
+                android:layout_alignParentTop="true"/>
 
 
+    </RelativeLayout>
 
-    </LinearLayout>
 
     <TextView
             android:id="@+id/textView2"

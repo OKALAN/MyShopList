@@ -14,6 +14,7 @@ import com.projetandroid.myshoplist.entities.Article_details;
 import com.projetandroid.myshoplist.entities.Shopping_list;
 import com.projetandroid.myshoplist.utils.Shared;
 
+import java.util.Date;
 import java.util.List;
 
 public class Shopping_List extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class Shopping_List extends AppCompatActivity {
     private TextView txtName;
     private TextView txtDate;
     private TextView txttotal;
+    final long checkedDate = new Date().getTime();
     //private EditText txtBudget;
 
     @Override
@@ -125,6 +127,7 @@ public class Shopping_List extends AppCompatActivity {
         {
             if(detail.get(i).status == 1)
             {
+                detail.get(i).datechecked = checkedDate;
                 qty += detail.get(i).amount_unity;
                 total += ( detail.get(i).price * detail.get(i).amount_unity);
             }

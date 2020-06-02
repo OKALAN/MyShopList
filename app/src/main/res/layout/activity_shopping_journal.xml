@@ -20,9 +20,6 @@
                       android:layout_height="wrap_content"
                       tools:ignore="UnknownId">
 
-
-
-
             <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
@@ -40,7 +37,7 @@
 
     </RelativeLayout>
 
-    
+
     <ListView
             android:id="@+id/listview"
             android:layout_width="match_parent"
@@ -50,23 +47,6 @@
             android:layout_centerHorizontal="true" />
 
 
-    <RelativeLayout
-            android:id="@+id/bottomWrapper"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/light_brown"
-            android:padding="4dp"
-            android:layout_alignParentBottom="true"
-    >
 
-        <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/deep_grey"
-                android:textSize="14dp"
-                android:text="TextView" />
-
-    </RelativeLayout>
 
 </RelativeLayout>

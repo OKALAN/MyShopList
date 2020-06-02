@@ -1,15 +1,12 @@
 package com.projetandroid.myshoplist.dialog;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import com.projetandroid.myshoplist.R;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
-
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;

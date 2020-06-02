@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -23,6 +24,7 @@ import com.projetandroid.myshoplist.entities.Shopping_list;
 import com.projetandroid.myshoplist.utils.Shared;
 import android.provider.MediaStore;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +53,7 @@ public class AddArticle_dialog extends Dialog  implements  View.OnClickListener 
 
 
       public   ImageView imageView;
-      public   Button broswer;
+      public   Button browser;
 
 
     public AddArticle_dialog(@NonNull Context context) {
@@ -119,33 +121,17 @@ public class AddArticle_dialog extends Dialog  implements  View.OnClickListener 
 
         }
 
-        /*imageView = findViewById(R.id.imageArticle);
-        broswer = findViewById(R.id.gallery);
+       // imageView = findViewById(R.id.imageArticle);
+        //browser = findViewById(R.id.gallery);
 
-       broswer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        //browser.setOnClickListener((View.OnClickListener) btnBrowserPressed);
 
-                      openGallery();
 
-            }
-        });*/
 
 
     }
 
-   /* private void openGallery() {
-        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
-        startActivityForResult(gallery, GALLERY_REQUEST_CODE);
-    }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK && requestCode == GALLERY_REQUEST_CODE){
-            imageURI = data.getData();
-            imageView.setImageURI(imageURI);
-        }
-    }*/
+
 
 
     protected AddArticle_dialog(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
@@ -155,6 +141,7 @@ public class AddArticle_dialog extends Dialog  implements  View.OnClickListener 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+
 
             case R.id.btnADD :
 
@@ -253,12 +240,22 @@ public class AddArticle_dialog extends Dialog  implements  View.OnClickListener 
                 break;
 
 
-
-
-
         }
 
     }
+
+
+ /*public OnClickListener btnBrowserPressed = new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent i = new Intent(Intent.ACTION_PICK,
+                android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        final int ACTIVITY_SELECT_IMAGE = 1234;
+        startActivityForResult(i, ACTIVITY_SELECT_IMAGE);
+
+    }
+}; */
+
 
 
 

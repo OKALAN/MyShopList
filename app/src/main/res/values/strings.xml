@@ -15,5 +15,7 @@
     <string name="totalPrice">TotalPrice</string>
     <string name="share_via">Share via</string>
     <string name="shopping_journal">shopping Journal</string>
+    <string name="shopping_list_name">shopping list name</string>
+    <string name="shopping_date">shopping date</string>
 
 </resources>
